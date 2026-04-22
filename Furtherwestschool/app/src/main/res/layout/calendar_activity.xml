@@ -13,7 +13,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:title="Academic Calendar"
-        android:background="#D39E9E"
+        android:background="#420303"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:navigationIcon="@android:drawable/ic_menu_revert"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

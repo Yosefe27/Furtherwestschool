@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.google.android.material.appbar.MaterialToolbar
 import com.squareup.picasso.Picasso
 
 class Calendar_Activity : AppCompatActivity() {
@@ -21,6 +22,13 @@ class Calendar_Activity : AppCompatActivity() {
         calendarImage = findViewById(R.id.calendarImage)
 
         fetchCalendar()
+
+        // Toolbar
+        val toolbar = findViewById<MaterialToolbar>(R.id.topAppBar)
+
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun fetchCalendar() {

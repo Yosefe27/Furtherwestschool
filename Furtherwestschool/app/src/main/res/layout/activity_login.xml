@@ -59,7 +59,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:hint="Email"
+            android:hint="Phone Number"
             android:inputType="textEmailAddress"
             android:textColor="#160101"
             android:textColorHint="#160101"
@@ -138,16 +138,25 @@
 
             <!-- WhatsApp -->
             <TextView
+                android:id="@+id/support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUPPORT"
+                android:textColor="#FFC107"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:padding="6dp" />
+            <!-- WhatsApp -->
+            <TextView
                 android:id="@+id/whatsappText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="💬 WhatsApp: +260978231172"
                 android:textColor="#25D366"
                 android:textStyle="bold"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 android:padding="6dp" />
 
-            <!-- Call -->
             <TextView
                 android:id="@+id/callText"
                 android:layout_width="wrap_content"
@@ -155,7 +164,18 @@
                 android:text="📞 Call: +260978231172"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="16sp"
+                android:textSize="13sp"
+                android:padding="6dp" />
+
+
+            <TextView
+                android:id="@+id/dev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App developed by Joseph Chapotoka +260766108205 \n chapotokjoseph@gmail.com"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="12sp"
                 android:padding="6dp" />
 
         </LinearLayout>
