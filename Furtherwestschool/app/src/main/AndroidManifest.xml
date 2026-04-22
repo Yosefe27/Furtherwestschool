@@ -22,6 +22,8 @@
         <activity android:name=".CalendarActivity" />
         <activity android:name=".PaymentsOptions" />
         <activity android:name=".Calendar_Activity" />
+        <activity android:name=".TransportPaymentActivity" />
+        <activity android:name=".FoodPaymentActivity" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">

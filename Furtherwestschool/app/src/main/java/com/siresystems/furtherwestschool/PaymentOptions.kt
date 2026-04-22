@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.appbar.MaterialToolbar
+import com.siresystems.furtherwestschool.adapters.TransportPaymentAdapter
 
 class PaymentsOptions : AppCompatActivity() {
 
@@ -32,11 +33,11 @@ class PaymentsOptions : AppCompatActivity() {
         }
 
         btnFood.setOnClickListener {
-            // startActivity(Intent(this, FoodActivity::class.java))
+            startActivity(Intent(this, FoodPaymentActivity::class.java))
         }
 
         btnTransport.setOnClickListener {
-            // startActivity(Intent(this, TransportActivity::class.java))
+            startActivity(Intent(this, TransportPaymentActivity::class.java))
         }
 
         btnOther.setOnClickListener {

@@ -23,19 +23,31 @@
         android:id="@+id/classText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Class"/>
+        android:text="Class:"/>
 
     <TextView
         android:id="@+id/gradeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Grade"/>
+        android:text="Grade:"/>
+
+    <TextView
+        android:id="@+id/prevTermText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Previous Term Balance:"/>
+
+    <TextView
+        android:id="@+id/currentTermText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Term Balance:"/>
 
     <TextView
         android:id="@+id/feesText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fees"/>
+        android:text="Total Fees Paid:"/>
 
     <TextView
         android:id="@+id/balanceText"

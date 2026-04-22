@@ -103,8 +103,12 @@ class MainActivity : AppCompatActivity() {
                                 obj.getString("StudentGrade"),
                                 obj.getString("StudentClass"),
                                 obj.getString("TotalFees"),
+                                obj.getString("prev_term_balance"),
+                                obj.getString("current_term_balance"),
                                 obj.getString("PaidFees"),
-                                obj.optString("StudentImage")
+                                obj.optString("StudentImage"),
+                                obj.optString("food"),
+                                obj.optString("transport")
                             )
                         )
                     }

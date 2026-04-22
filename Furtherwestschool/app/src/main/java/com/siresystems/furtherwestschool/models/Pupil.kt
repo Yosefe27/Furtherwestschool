@@ -8,6 +8,10 @@ data class Pupil(
     val StudentGrade: String,
     val StudentClass: String,
     val TotalFees: String,
+    val PrevTermBalance: String,
+    val CurrentTermBalance: String,
     val PaidFees: String,
-    val StudentImage: String? = null
+    val StudentImage: String? = null,
+    val FoodFees: String,
+    val TransportFees: String
 )

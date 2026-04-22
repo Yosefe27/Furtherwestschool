@@ -6,12 +6,13 @@ import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.appbar.MaterialToolbar
+import com.siresystems.furtherwestschool.adapters.TransportPaymentAdapter
 import com.siresystems.furtherwestschool.models.Pupil
 import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
 
-class PaymentsActivity : AppCompatActivity() {
+class TransportPaymentActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,7 +83,7 @@ class PaymentsActivity : AppCompatActivity() {
                     }
 
                     runOnUiThread {
-                        val adapter = PaymentsAdapter(this, paymentsList)
+                        val adapter = TransportPaymentAdapter(this, paymentsList)
                         listView.adapter = adapter
                     }
 
