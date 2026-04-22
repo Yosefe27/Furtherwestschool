@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.calendarBtn).setOnClickListener {
-            startActivity(Intent(this, CalendarActivity::class.java))
+            startActivity(Intent(this, Calendar_Activity::class.java))
         }
 
         findViewById<Button>(R.id.paymentsBtn).setOnClickListener {
