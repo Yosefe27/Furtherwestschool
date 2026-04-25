@@ -20,7 +20,7 @@ class FoodPaymentAdapter(
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
         val view = convertView ?: LayoutInflater.from(context)
-            .inflate(R.layout.payment_item, parent, false)
+            .inflate(R.layout.foodpayment_item, parent, false)
 
         val pupil = pupils[position]
 
