@@ -12,7 +12,8 @@
         android:orientation="horizontal"
         android:padding="12dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/secondary_dark">
 
         <!-- Student Details -->
         <LinearLayout
@@ -25,19 +26,21 @@
                 android:id="@+id/studentId"
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_dark"/>
 
             <TextView
                 android:id="@+id/studentName"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_dark"/>
 
             <TextView
                 android:id="@+id/foodBalance"
-                android:textColor="#5B0303"
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_dark"/>
 
         </LinearLayout>
 
@@ -45,8 +48,8 @@
         <Button
             android:id="@+id/payBtn"
             android:text="MAKE PAYMENT"
-            android:backgroundTint="#420303"
-            android:textColor="@color/white"
+            android:backgroundTint="@color/primary_dark"
+            android:textColor="@color/on_primary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 

@@ -2,14 +2,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="12dp">
+    android:padding="12dp"
+    android:background="@color/primary_dark">
 
     <ImageView
         android:id="@+id/pupilImage"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/school"/>
+        android:src="@drawable/graduate"/>
 
     <TextView
         android:id="@+id/nameText"
@@ -17,41 +18,49 @@
         android:layout_height="wrap_content"
         android:text="Student Name"
         android:textStyle="bold"
-        android:textSize="18sp"/>
+        android:textSize="18sp"
+        android:textColor="@color/secondary"/>
 
     <TextView
         android:id="@+id/classText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Class:"/>
+        android:text="Class:"
+        android:textColor="@color/secondary"/>
 
     <TextView
         android:id="@+id/gradeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Grade:"/>
+        android:text="Grade:"
+        android:textColor="@color/secondary"/>
 
     <TextView
         android:id="@+id/prevTermText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Previous Term Balance:"/>
+        android:text="Previous Term Balance:"
+        android:textColor="@color/secondary"/>
 
     <TextView
         android:id="@+id/currentTermText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Current Term Balance:"/>
+        android:text="Current Term Balance:"
+        android:textColor="@color/secondary"/>
 
     <TextView
         android:id="@+id/feesText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Fees Paid:"/>
+        android:text="Total Fees Paid:"
+        android:textColor="@color/secondary"/>
 
     <TextView
         android:id="@+id/balanceText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Balance"/>
+        android:text="Balance"
+        android:textColor="@color/secondary"
+        android:textStyle="bold"/>
 </LinearLayout>

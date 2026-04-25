@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Login"
-            android:textColor="@android:color/white"
+            android:textColor="@color/on_primary"
             android:backgroundTint="#420303"
             app:layout_constraintTop_toBottomOf="@id/password"
             app:layout_constraintStart_toStartOf="parent"
@@ -162,7 +162,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="📞 Call: +260978231172"
-                android:textColor="@color/white"
+                android:textColor="@color/on_primary"
                 android:textStyle="bold"
                 android:textSize="13sp"
                 android:padding="6dp" />
@@ -173,7 +173,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="App developed by Joseph Chapotoka +260766108205 \n chapotokjoseph@gmail.com"
-                android:textColor="@color/white"
+                android:textColor="@color/on_primary"
                 android:textStyle="bold"
                 android:textSize="12sp"
                 android:padding="6dp" />

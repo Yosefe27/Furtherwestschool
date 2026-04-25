@@ -41,7 +41,7 @@
         android:layout_marginTop="8dp"
         android:drawableStart="@android:drawable/ic_menu_edit"
         android:text="  Select pupil and tap 'MAKE PAYMENT'. \n  You will be redirected to phone dialer to \n  complete payment using mobile money.\n  Please take note of  your child's Student ID."
-        android:textColor="@color/white"
+        android:textColor="@color/on_primary"
         android:textSize="14sp"
         android:background="#420303"
         android:padding="10dp"
