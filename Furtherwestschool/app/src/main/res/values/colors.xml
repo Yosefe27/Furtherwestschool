@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Brand -->
+    <color name="primary">#49040A</color>
+    <color name="primary_dark">#2E0205</color>
+    <color name="primary_light">#7A1C22</color>
+
+    <!-- Text on Primary (Toolbar text, button text) -->
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- Secondary / Accent -->
+    <color name="secondary">#FFC107</color>
+    <color name="secondary_dark">#FFA000</color>
+    <color name="secondary_light">#FFD54F</color>
+
+    <!-- Backgrounds -->
+    <color name="background">#FFFFFF</color>
+    <color name="form_background">#C3BFBF</color>
+    <color name="surface">#F5F5F5</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Status / Feedback -->
+    <color name="error">#D32F2F</color>
+    <color name="success">#388E3C</color>
+
 </resources>
