@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E4D7D7"
+    android:background="@drawable/bg1"
     android:padding="12dp">
 
     <!-- Top Toolbar -->
@@ -20,6 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <!-- Welcome Text -->
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
@@ -27,15 +28,13 @@
         android:text="Welcome Parent"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="#420303"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="12dp"
         android:layout_marginStart="8dp"
         app:layout_constraintTop_toBottomOf="@id/topAppBar"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <!-- Buttons Row -->
-
-    <!-- News -->
     <Button
         android:id="@+id/newsBtn"
         android:layout_width="0dp"
@@ -50,7 +49,6 @@
         app:layout_constraintEnd_toStartOf="@id/calendarBtn"
         app:layout_constraintHorizontal_weight="1"/>
 
-    <!-- Calendar -->
     <Button
         android:id="@+id/calendarBtn"
         android:layout_width="0dp"
@@ -65,7 +63,6 @@
         app:layout_constraintEnd_toStartOf="@id/paymentsBtn"
         app:layout_constraintHorizontal_weight="1"/>
 
-    <!-- Payments -->
     <Button
         android:id="@+id/paymentsBtn"
         android:layout_width="0dp"
@@ -79,28 +76,57 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"/>
 
-    <!-- Title BELOW buttons -->
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="My Pupils"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#420303"
+    <!-- Divider Line -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#FFFFFF"
+        android:alpha="0.7"
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/newsBtn"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Pupil List -->
-    <ListView
-        android:id="@+id/pupilList"
+    <!-- Card Container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pupilCard"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="12dp"
-        app:layout_constraintTop_toBottomOf="@id/title"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintTop_toBottomOf="@id/divider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="#FFFFFF">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Pupils"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#420303"/>
+
+            <!-- Pupil List -->
+            <ListView
+                android:id="@+id/pupilList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
