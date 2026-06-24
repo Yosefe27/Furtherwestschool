@@ -13,7 +13,7 @@ import com.squareup.picasso.Picasso
 class Calendar_Activity : AppCompatActivity() {
 
     private lateinit var calendarImage: ImageView
-    private val url = "https://yosefe27-001-site1.ktempurl.com/apis/get_calendar.php"
+    private val url = "https://furtherwest-001-site1.ktempurl.com/apis/get_calendar.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

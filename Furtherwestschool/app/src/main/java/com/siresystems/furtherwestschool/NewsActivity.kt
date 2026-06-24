@@ -15,7 +15,7 @@ class NewsActivity : AppCompatActivity() {
     private lateinit var newsListView: ListView
     private lateinit var newsList: MutableList<NewsItem>
 
-    private val url = "https://yosefe27-001-site1.ktempurl.com/apis/get_news.php" // CHANGE THIS
+    private val url = "https://furtherwest-001-site1.ktempurl.com/apis/get_news.php" // CHANGE THIS
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -109,7 +109,7 @@ class NewsActivity : AppCompatActivity() {
                 contentText.maxLines = Int.MAX_VALUE
                 toggleText.text = "Show Less"
             } else {
-                contentText.maxLines = 2
+                contentText.maxLines = 20
                 toggleText.text = "Show More"
             }
 

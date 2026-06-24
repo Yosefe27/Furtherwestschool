@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#49040A"
+    android:layout_marginBottom="8dp"
+    android:elevation="2dp">
+
+    <!-- Receipt Image -->
+    <ImageView
+        android:id="@+id/rcptImage"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download Receipt"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#49040A"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"/>
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/rcptDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2026-04-10"
+        android:textColor="#FFFFFF"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/rcptNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Content -->
+    <TextView
+        android:id="@+id/rcptStudentID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Student ID:"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="6dp"/>
+
+    <!-- Amount -->
+    <TextView
+        android:id="@+id/rcptAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/rcptStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Student Name -->
+    <TextView
+        android:id="@+id/rcptName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="4dp"/>
+
+
+</LinearLayout>

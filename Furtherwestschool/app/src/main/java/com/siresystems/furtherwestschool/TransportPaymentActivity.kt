@@ -46,7 +46,7 @@ class TransportPaymentActivity : AppCompatActivity() {
             try {
 
                 val url = URL(
-                    "https://yosefe27-001-site1.ktempurl.com/apis/get_students.php?parent_id=$parentEmail"
+                    "https://furtherwest-001-site1.ktempurl.com/apis/get_students.php?parent_id=$parentEmail"
                 )
 
                 val conn = url.openConnection() as HttpURLConnection

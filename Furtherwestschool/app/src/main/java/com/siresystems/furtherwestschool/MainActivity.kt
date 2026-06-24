@@ -7,7 +7,11 @@ import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.android.volley.Request
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.firebase.messaging.FirebaseMessaging
 import com.siresystems.furtherwestschool.adapters.PupilAdapter
 import com.siresystems.furtherwestschool.models.Pupil
 import org.json.JSONObject
@@ -22,79 +26,112 @@ class MainActivity : AppCompatActivity() {
 
         val prefs = getSharedPreferences("UserSession", MODE_PRIVATE)
 
-        // ✅ CHECK LOGIN SESSION
-        val isLoggedIn = prefs.getBoolean("isLoggedIn", false)
-
-        if (!isLoggedIn) {
+        // ✅ LOGIN CHECK
+        if (!prefs.getBoolean("isLoggedIn", false)) {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
             return
         }
 
-        // ✅ GET USER INFO
+        // ✅ USER INFO
         val name = prefs.getString("name", "Parent")
-        val email = prefs.getString("email", "")
+        val email = prefs.getString("email", "") ?: ""
 
-        // ✅ WELCOME TEXT
+        // ✅ UI
         val welcomeText = findViewById<TextView>(R.id.welcomeText)
         welcomeText.text = "Welcome Parent $name"
 
-        // ✅ TOOLBAR (LOGOUT)
         val toolbar = findViewById<MaterialToolbar>(R.id.topAppBar)
-
         toolbar.setNavigationOnClickListener {
             prefs.edit().clear().apply()
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
 
-        // ✅ LOAD STUDENTS FROM API
-        loadStudents(email ?: "")
+        // ✅ LOAD STUDENTS
+        loadStudents(email)
 
-        // Navigation buttons
+        // ✅ NAVIGATION
         findViewById<Button>(R.id.newsBtn).setOnClickListener {
             startActivity(Intent(this, NewsActivity::class.java))
         }
 
-        findViewById<Button>(R.id.calendarBtn).setOnClickListener {
-            startActivity(Intent(this, Calendar_Activity::class.java))
-        }
-
         findViewById<Button>(R.id.paymentsBtn).setOnClickListener {
-            //Toast.makeText(this, "Coming soon", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, PaymentsOptions::class.java))
         }
+
+        findViewById<Button>(R.id.otherBtn).setOnClickListener {
+            startActivity(Intent(this, OtherOptions::class.java))
+        }
+
+        // ✅ FIREBASE TOKEN
+        FirebaseMessaging.getInstance().token
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val token = task.result
+                    println("FCM Token: $token")
+
+                    sendTokenToServer(token)
+                } else {
+                    println("Failed to get FCM token")
+                }
+            }
     }
 
-    // ✅ LOAD STUDENTS FUNCTION
+    // =========================
+    // ✅ SEND TOKEN TO SERVER
+    // =========================
+    private fun sendTokenToServer(token: String) {
+
+        val prefs = getSharedPreferences("UserSession", MODE_PRIVATE)
+        val email = prefs.getString("email", "") ?: ""
+
+        val url = "https://yosefe27-001-site1.ktempurl.com/apis/save_token.php"
+
+        val request = object : StringRequest(
+            Request.Method.POST, url,
+            { response -> println("Token saved: $response") },
+            { error -> error.printStackTrace() }
+        ) {
+            override fun getParams(): MutableMap<String, String> {
+                return hashMapOf(
+                    "email" to email,
+                    "token" to token
+                )
+            }
+        }
+
+        Volley.newRequestQueue(this).add(request)
+    }
+
+    // =========================
+    // ✅ LOAD STUDENTS
+    // =========================
     private fun loadStudents(parentEmail: String) {
 
         val listView = findViewById<ListView>(R.id.pupilList)
 
         Thread {
-
             try {
 
                 val url = URL(
-                    "https://yosefe27-001-site1.ktempurl.com/apis/get_students.php?parent_id=$parentEmail"
+                    "https://furtherwest-001-site1.ktempurl.com/apis/get_students.php?parent_id=$parentEmail"
                 )
 
                 val conn = url.openConnection() as HttpURLConnection
                 conn.requestMethod = "GET"
 
-                val reader = conn.inputStream.bufferedReader()
-                val response = reader.readText()
-
+                val response = conn.inputStream.bufferedReader().readText()
                 val json = JSONObject(response)
 
                 if (json.getString("status") == "success") {
 
-                    val studentsArray = json.getJSONArray("students")
+                    val array = json.getJSONArray("students")
                     val pupils = ArrayList<Pupil>()
 
-                    for (i in 0 until studentsArray.length()) {
+                    for (i in 0 until array.length()) {
 
-                        val obj = studentsArray.getJSONObject(i)
+                        val obj = array.getJSONObject(i)
 
                         pupils.add(
                             Pupil(
@@ -114,24 +151,21 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     runOnUiThread {
-                        val adapter = PupilAdapter(this, pupils)
-                        listView.adapter = adapter
+                        listView.adapter = PupilAdapter(this, pupils)
                     }
 
                 } else {
-
                     runOnUiThread {
                         Toast.makeText(this, "No students found", Toast.LENGTH_SHORT).show()
                     }
                 }
 
             } catch (e: Exception) {
+                e.printStackTrace()
 
                 runOnUiThread {
                     Toast.makeText(this, "Error loading students", Toast.LENGTH_SHORT).show()
                 }
-
-                e.printStackTrace()
             }
         }.start()
     }

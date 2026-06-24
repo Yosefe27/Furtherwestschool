@@ -1,5 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
+
+    // ✅ ADD THIS
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -14,8 +17,8 @@ android {
         applicationId = "com.siresystems.furtherwestschool"
         minSdk = 24
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -29,6 +32,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -42,10 +46,15 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.generativeai)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
     implementation("com.squareup.picasso:picasso:2.8")
     implementation("com.android.volley:volley:1.2.1")
     implementation("com.github.chrisbanes:PhotoView:2.3.0")
+
+    // ✅ FIREBASE MESSAGING
+    implementation("com.google.firebase:firebase-messaging:23.4.0")
 }

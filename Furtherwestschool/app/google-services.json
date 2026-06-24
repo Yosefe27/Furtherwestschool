@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "106522358199",
+    "project_id": "furtherwestschool-f1b1c",
+    "storage_bucket": "furtherwestschool-f1b1c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106522358199:android:8f83182ec30b91c8f8f832",
+        "android_client_info": {
+          "package_name": "com.siresystems.furtherwestapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRlWeiwuRADX0G5EbbKA2gETRTjGO9KcM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106522358199:android:ed685ec488abacf2f8f832",
+        "android_client_info": {
+          "package_name": "com.siresystems.furtherwestschool"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRlWeiwuRADX0G5EbbKA2gETRTjGO9KcM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -41,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
             Thread {
                 try {
                     // 🔥 IMPORTANT: Replace with YOUR IP ADDRESS
-                    val url = URL("https://yosefe27-001-site1.ktempurl.com/apis/login_user.php")
+                    val url = URL("https://furtherwest-001-site1.ktempurl.com/apis/login_user.php")
                     val conn = url.openConnection() as HttpURLConnection
 
                     conn.requestMethod = "POST"

@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:background="#420303"
         android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
-        app:title="Select Payment Option"
+        app:title="Other Options"
         app:navigationIcon="@android:drawable/ic_menu_revert"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,69 +42,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- School Fees -->
         <Button
-            android:id="@+id/btnFees"
+            android:id="@+id/btnCalendar"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="School Fees"
-            android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#49040A"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- Transport -->
-        <Button
-            android:id="@+id/btnTransport"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Transport"
-            android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#49040A"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- Food -->
-        <Button
-            android:id="@+id/btnFood"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Food"
-            android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#49040A"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- Other -->
-        <Button
-            android:id="@+id/btnOther"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Other Payments"
+            android:text="View Calendar"
             android:textSize="20sp"
             android:textColor="#FFFFFF"
             android:backgroundTint="#49040A"
             android:layout_marginBottom="16dp"/>
 
         <Button
-            android:id="@+id/btnhistory"
+            android:id="@+id/btnChangePassword"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="View Payment History"
+            android:text="Change Password"
             android:textSize="20sp"
-            android:textColor="#fffc67"
-            android:backgroundTint="#080649"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#49040A"
             android:layout_marginBottom="16dp"/>
 
         <Button
-            android:id="@+id/btnreceipts"
+            android:id="@+id/btnAppSupport"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="Download Receipts"
+            android:text="App Support"
             android:textSize="20sp"
-            android:textColor="#fffc67"
-            android:backgroundTint="#080649"
-            android:visibility="invisible"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#49040A"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#49040A"
             android:layout_marginBottom="16dp"/>
 
     </LinearLayout>

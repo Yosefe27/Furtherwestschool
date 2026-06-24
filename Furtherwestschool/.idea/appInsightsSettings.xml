@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.siresystems.furtherwestschool" />
+                  <option name="mobileSdkAppId" value="1:106522358199:android:ed685ec488abacf2f8f832" />
+                  <option name="projectId" value="furtherwestschool-f1b1c" />
+                  <option name="projectNumber" value="106522358199" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
